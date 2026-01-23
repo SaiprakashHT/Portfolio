@@ -1,0 +1,30 @@
+name: sample_project
+description: "Saiprakash H T - Portfolio Web Application"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.1.0
+  font_awesome_flutter: ^10.6.0
+  url_launcher: ^6.2.1
+  animated_text_kit: ^4.2.2
+  visibility_detector: ^0.4.0+2
+  flutter_animate: ^4.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
