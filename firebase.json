@@ -4,6 +4,27 @@
       "android": {
         "default": {
           "projectId": "portfolio-e7e14",
+          "appId": "1:459452418965:android:2d48f43d10f4b69cb1449c",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "portfolio-e7e14",
+          "configurations": {
+            "android": "1:459452418965:android:2d48f43d10f4b69cb1449c",
+            "web": "1:459452418965:web:15e12846a14cfac2b1449c",
+            "windows": "1:459452418965:web:65efa5e380987002b1449c"
+          }
+        }
+      }
+    }
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "portfolio-e7e14",
           "appId": "1:685269208942:android:f4b2ce963c16c746227b7f",
           "fileOutput": "android/app/google-services.json"
         }

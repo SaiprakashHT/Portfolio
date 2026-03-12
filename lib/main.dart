@@ -1,8 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:sample_project/firebase_options.dart';
 import 'core/theme/app_theme.dart';
 import 'screens/portfolio_page.dart';
 
-void main() {
+void main() async {
+  // 1. Ensure Flutter binding is initialized
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // 2. Initialize Firebase using the generated options
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -30,10 +37,7 @@ class _MyAppState extends State<MyApp> {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: _isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      home: PortfolioPage(
-        onThemeToggle: _toggleTheme,
-        isDarkMode: _isDarkMode,
-      ),
+      home: PortfolioPage(onThemeToggle: _toggleTheme, isDarkMode: _isDarkMode),
     );
   }
 }
