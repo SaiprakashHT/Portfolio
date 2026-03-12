@@ -11,7 +11,7 @@ class PortfolioData {
 
   // Professional Summary
   static const String professionalSummary = '''
-Results-driven Full Stack Flutter Developer with 2+ years of experience specializing in mobile and web application development. Demonstrated expertise in building 10+ production-ready mobile applications using Flutter and developing 3+ web applications using Laravel.
+Results-driven Full Stack Flutter Developer with 2+ years of experience specializing in mobile and web application development. Demonstrated expertise in building 10+ production-ready mobile applications using Flutter and developing 4+ web applications using Laravel.
 
 Proficient in end-to-end software development lifecycle, from architecture design to deployment and maintenance. Strong track record of delivering scalable solutions with clean code practices, RESTful API integration, Firebase Cloud Messaging, real-time data synchronization, and optimized UI/UX.
 
@@ -21,7 +21,7 @@ Experienced in Agile methodologies, code reviews, cross-functional collaboration
   static const List<Map<String, String>> stats = [
     {'value': '2+', 'label': 'Years Experience'},
     {'value': '10+', 'label': 'Mobile Apps'},
-    {'value': '3+', 'label': 'Web Apps'},
+    {'value': '4+', 'label': 'Web Apps'},
     {'value': '10K+', 'label': 'Active Users'},
   ];
 
@@ -217,6 +217,13 @@ Experienced in Agile methodologies, code reviews, cross-functional collaboration
         'Comprehensive rider performance metrics',
         'Admin dashboard for fleet management',
       ],
+      links: [
+        ProjectLink(
+          label: 'Admin Panel',
+          url: 'https://miroute.mytrustlab.co.in/login',
+          icon: ProjectLinks.adminIcon,
+        ),
+      ],
     ),
     Project(
       name: 'Boutique Dekho',
@@ -244,6 +251,23 @@ Experienced in Agile methodologies, code reviews, cross-functional collaboration
         'Vendor dashboard with sales analytics',
       ],
       userCount: '3,000+',
+      links: [
+        ProjectLink(
+          label: 'Website',
+          url: 'https://ivory-dugong-338310.hostingersite.com/',
+          icon: ProjectLinks.globe,
+        ),
+        ProjectLink(
+          label: 'User App',
+          url: 'https://play.google.com/store/apps/details?id=com.boutiquedekho.user',
+          icon: ProjectLinks.userIcon,
+        ),
+        ProjectLink(
+          label: 'Vendor App',
+          url: 'https://play.google.com/store/apps/details?id=com.boutique.tailor',
+          icon: ProjectLinks.vendorIcon,
+        ),
+      ],
     ),
     Project(
       name: 'Go Car Wash',
@@ -273,6 +297,46 @@ Experienced in Agile methodologies, code reviews, cross-functional collaboration
         'Multi-language support (English, Hindi, Telugu)',
       ],
       userCount: '2,500+',
+      links: [
+        ProjectLink(
+          label: 'Admin Panel',
+          url: 'https://royalblue-nightingale-664281.hostingersite.com/login',
+          icon: ProjectLinks.adminIcon,
+        ),
+      ],
+    ),
+    Project(
+      name: 'Beest Seeds',
+      subtitle: 'Fish Seeds E-Commerce Platform',
+      description:
+          'Complete fish seeds e-commerce platform with User App, combined Vendor & Driver App (role-based login), and Admin Web Panel for managing fish seed orders and deliveries.',
+      type: ProjectType.team,
+      category: ProjectCategory.fullStack,
+      role: 'Full Stack Developer',
+      technologies: [
+        'Flutter',
+        'Laravel',
+        'MySQL',
+        'RESTful APIs',
+        'Firebase FCM',
+        'Google Maps',
+        'Payment Integration',
+      ],
+      features: [
+        'Separate User App and combined Vendor/Driver App',
+        'Role-based login for vendor and driver in single app',
+        'Order management with delivery tracking',
+        'Admin web panel for centralized management',
+        'Payment gateway integration',
+        'Push notifications for order updates',
+      ],
+      links: [
+        ProjectLink(
+          label: 'Admin Panel',
+          url: 'https://aliceblue-wallaby-326294.hostingersite.com/',
+          icon: ProjectLinks.adminIcon,
+        ),
+      ],
     ),
     Project(
       name: 'Cash-EX',
@@ -304,7 +368,7 @@ Experienced in Agile methodologies, code reviews, cross-functional collaboration
       name: 'MyDeal',
       subtitle: 'Deals & Offers Platform',
       description:
-          'Mobile application for discovering and sharing promotional offers and deals from local businesses and online retailers with 4,000+ active users and 10,000+ deals listed.',
+          'Mobile application for discovering and sharing promotional offers and deals from local businesses and online retailers with 500+ active users and 1,000+ deals listed.',
       type: ProjectType.individual,
       category: ProjectCategory.fullStack,
       technologies: [
@@ -323,7 +387,7 @@ Experienced in Agile methodologies, code reviews, cross-functional collaboration
         'Redis caching reducing response time by 60%',
         'Coupon code management with auto-apply',
       ],
-      userCount: '4,000+',
+      userCount: '500+',
     ),
     Project(
       name: 'VNews',

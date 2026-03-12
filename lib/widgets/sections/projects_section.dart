@@ -296,29 +296,23 @@ class _ProjectCard extends StatelessWidget {
               ),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                if (project.playStoreUrl != null)
-                  _buildLinkButton(
-                    context,
-                    FontAwesomeIcons.googlePlay,
-                    project.playStoreUrl!,
-                    'Play Store',
+                Expanded(
+                  child: Wrap(
+                    spacing: 0,
+                    runSpacing: 0,
+                    children: [
+                      ...project.links.map(
+                        (link) => _buildLinkButton(
+                          context,
+                          link.icon,
+                          link.url,
+                          link.label,
+                        ),
+                      ),
+                    ],
                   ),
-                if (project.websiteUrl != null)
-                  _buildLinkButton(
-                    context,
-                    FontAwesomeIcons.globe,
-                    project.websiteUrl!,
-                    'Website',
-                  ),
-                if (project.githubUrl != null)
-                  _buildLinkButton(
-                    context,
-                    FontAwesomeIcons.github,
-                    project.githubUrl!,
-                    'GitHub',
-                  ),
+                ),
                 _buildDetailsButton(context),
               ],
             ),
@@ -498,6 +492,33 @@ class _ProjectCard extends StatelessWidget {
                             )
                             .toList(),
                       ),
+                      if (project.links.isNotEmpty) ...[
+                        const SizedBox(height: AppConstants.spacingLG),
+                        Text(
+                          'Links',
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                fontWeight: FontWeight.bold,
+                              ),
+                        ),
+                        const SizedBox(height: AppConstants.spacingSM),
+                        Wrap(
+                          spacing: AppConstants.spacingSM,
+                          runSpacing: AppConstants.spacingSM,
+                          children: project.links
+                              .map(
+                                (link) => ActionChip(
+                                  avatar: FaIcon(
+                                    link.icon,
+                                    size: 14,
+                                    color: AppColors.primary,
+                                  ),
+                                  label: Text(link.label),
+                                  onPressed: () => _launchUrl(link.url),
+                                ),
+                              )
+                              .toList(),
+                        ),
+                      ],
                     ],
                   ),
                 ),

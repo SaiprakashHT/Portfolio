@@ -92,11 +92,13 @@ class AboutSection extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: AppConstants.spacingMD),
-              Text(
-                'Professional Summary',
-                style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
+              Expanded(
+                child: Text(
+                  'Professional Summary',
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
               ),
             ],
           ),

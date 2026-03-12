@@ -195,12 +195,14 @@ class _ExperienceCard extends StatelessWidget {
                         color: AppColors.secondary,
                       ),
                       const SizedBox(width: AppConstants.spacingXS),
-                      Text(
-                        experience.company,
-                        style:
-                            Theme.of(context).textTheme.titleMedium?.copyWith(
-                                  color: AppColors.secondary,
-                                ),
+                      Expanded(
+                        child: Text(
+                          experience.company,
+                          style:
+                              Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    color: AppColors.secondary,
+                                  ),
+                        ),
                       ),
                     ],
                   ),

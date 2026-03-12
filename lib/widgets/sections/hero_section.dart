@@ -262,26 +262,24 @@ class HeroSection extends StatelessWidget {
               ),
             ),
           ),
-          // Inner Circle with Initial
+          // Inner Circle with Profile Image
           Container(
             width: size - 60,
             height: size - 60,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               shape: BoxShape.circle,
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                 colors: AppColors.primaryGradient,
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
-            ),
-            child: Center(
-              child: Text(
-                'SP',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: isMobile ? 60 : 100,
-                  fontWeight: FontWeight.bold,
-                ),
+              image: const DecorationImage(
+                image: AssetImage('assets/images/profile.jpg'),
+                fit: BoxFit.cover,
+              ),
+              border: Border.all(
+                color: AppColors.primary.withValues(alpha: 0.3),
+                width: 3,
               ),
             ),
           ),
